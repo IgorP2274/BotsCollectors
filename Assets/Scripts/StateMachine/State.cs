@@ -9,6 +9,7 @@ public class State : MonoBehaviour
 
     protected Transform Target { get; set; }
     protected Station WorkStation { get; set; }
+    protected Flag FlagForBild { get;  set; }
 
     public void Enter()
     {
@@ -16,6 +17,8 @@ public class State : MonoBehaviour
         {
             Target = GetComponent<Bot>().Target;
             WorkStation = GetComponent<Bot>().WorkStation;
+            FlagForBild = GetComponent<Bot>().Flag;
+
             enabled = true;
 
             foreach (var transition in _transitions)

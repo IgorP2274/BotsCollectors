@@ -5,4 +5,10 @@ public class WaitState : State
         Target = GetComponent<Bot>().Target;
         InitTarget();
     }
+
+    public void SetFlag()
+    {
+        FlagForBild = GetComponent<Bot>().Flag;
+        InitTarget();
+    }
 }

@@ -12,10 +12,13 @@ public class Transition : MonoBehaviour
     protected Transform Target { get; private set; }
     protected Station WorkStation { get; private set; }
 
+    protected Flag FlagForBild { get; private set; }
+
     public void Init()
     { 
         Target = GetComponent<Bot>().Target;
         WorkStation = GetComponent<Bot>().WorkStation;
+        FlagForBild = GetComponent<Bot>().Flag;
     }
 
     public void OffNeedTransit() =>

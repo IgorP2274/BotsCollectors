@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 5308644727570633948}
   - component: {fileID: -9203269214816900667}
   - component: {fileID: 7850824120045994288}
+  - component: {fileID: 4621946743548084081}
+  - component: {fileID: -8803023132956678523}
   m_Layer: 0
   m_Name: Bot
   m_TagString: Untagged
@@ -122,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _station: {fileID: 0}
+  _flag: {fileID: 0}
   _target: {fileID: 0}
   "_\u0441hangeTarget":
     m_PersistentCalls:
@@ -129,6 +132,21 @@ MonoBehaviour:
       - m_Target: {fileID: 1964309630958892134}
         m_TargetAssemblyTypeName: WaitState, Assembly-CSharp
         m_MethodName: SetTarget
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  "_\u0441hangeFlag":
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1964309630958892134}
+        m_TargetAssemblyTypeName: WaitState, Assembly-CSharp
+        m_MethodName: SetFlag
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -168,6 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _transitions:
   - {fileID: -3401906789435447703}
+  - {fileID: 4621946743548084081}
 --- !u!114 &-3401906789435447703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +244,7 @@ MonoBehaviour:
   _transitions:
   - {fileID: 2550865206056561318}
   _speed: 5
-  _target: {fileID: 0}
+  _heightofResourse: 2
 --- !u!114 &2550865206056561318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetState: {fileID: 2634337065872027392}
+  _heightofResourse: 2
 --- !u!114 &2634337065872027392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,3 +316,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetState: {fileID: 1964309630958892134}
+--- !u!114 &4621946743548084081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5420672418251275253}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2267c526903f1be4aa60fd01d11567d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetState: {fileID: -8803023132956678523}
+--- !u!114 &-8803023132956678523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5420672418251275253}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856fd05882b05f24790445e68ac169d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transitions: []
+  _speed: 3
