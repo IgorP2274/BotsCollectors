@@ -1,34 +1,85 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Station))]
+
 public class Selector : MonoBehaviour
 {
-    private bool _isSelected = false;
+    [SerializeField] private Flag _flag;
+
+    private Flag _flagForBild;
+    private bool _isSelectedStation = false;
+    private bool _isSelectedFlag = false;
     private RaycastHit _hit;
     private Station _station;
-    private void CreateFlag()
+    private Station _selectedStation = null;
+    private Bot _bot = null;
+    private bool _startBild = false;
+
+    private void Awake()
     {
-        if (Input.GetMouseButtonDown(0) && _isSelected == false)
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out _hit, 100))
-            {
-                if (_hit.transform.TryGetComponent<Station>(out _station))
-                {
-                    _isSelected = true;
-                }
-            }
-        }
-
-        if (Input.GetMouseButtonUp(0) && _isSelected)
-        {
-            _station.Swith();
-            _isSelected = false;
-        }
+        _station = GetComponent<Station>();
     }
 
     private void Update()
     {
+        SelectStation();
         CreateFlag();
+        StartBild();
+    }
+
+    public void SelectStation()
+    {
+        if (Input.GetMouseButtonDown(0) && _isSelectedStation == false)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Physics.Raycast(ray, out _hit);
+            _hit.transform.TryGetComponent(out _selectedStation);
+
+            if (_station == _selectedStation)
+                _isSelectedStation = true;
+        }
+
+        if (Input.GetMouseButtonUp(0) && _isSelectedStation)
+            _isSelectedFlag = true;
+    }
+
+    private void CreateFlag()
+    {
+        if (_isSelectedFlag == false)
+            return;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out _hit))
+            {
+                if (_flagForBild == null)
+                    _flagForBild = Instantiate(_flag, _hit.point, Quaternion.identity);
+                else
+                    _flagForBild.transform.position = _hit.point;
+
+
+
+
+                _isSelectedFlag = false;
+                _isSelectedStation = false;
+            }
+        }
+    }
+
+    private void StartBild()
+    {
+        if (_flagForBild == null) 
+            return;
+
+        if (_startBild)
+            return;
+
+        if (_station.TryGetFreeBot(out _bot))
+        {
+            _bot.GetFlag(_flagForBild);
+            _startBild = true;
+        }   
     }
 }

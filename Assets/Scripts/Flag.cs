@@ -3,15 +3,13 @@ using UnityEngine;
 public class Flag : MonoBehaviour
 {
     [SerializeField] private Station _station;
-    [SerializeField] private Bot _bot;
 
-    public void CreateStation()
+    public void CreateStation(Bot bot)
     {
         Station station = Instantiate(_station, transform.position, Quaternion.identity);
-        _bot.GetBase(station);
-        _bot.transform.SetParent(_station.transform);
-        _bot.GetFlag(null);
+        bot.GetBase(station);
+        bot.transform.SetParent(_station.transform);
+        bot.GetFlag(null);
         Destroy(gameObject);
     }
-
 }
