@@ -8,7 +8,7 @@ public class Flag : MonoBehaviour
     {
         Station station = Instantiate(_station, transform.position, Quaternion.identity);
         bot.GetBase(station);
-        bot.transform.SetParent(_station.transform);
+        bot.transform.SetParent(station.transform);
         bot.GetFlag(null);
         Destroy(gameObject);
     }

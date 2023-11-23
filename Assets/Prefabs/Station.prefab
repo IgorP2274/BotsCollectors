@@ -115,9 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parentResourse: {fileID: 0}
   _bot: {fileID: 5420672418251275248, guid: ef821089b47ee9e4d812e71628b1495c, type: 3}
-  _startBotCount: 3
+  _startBotCount: 0
   _botCost: 3
-  _stationCost: 5
   _takeCristal:
     m_PersistentCalls:
       m_Calls:
@@ -162,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _flag: {fileID: 6778987022314600448, guid: bb11c3c65b3196a4fad3f78b2bf6dd9d, type: 3}
+  _stationBildCost: 5
 --- !u!114 &4766902308389707120
 MonoBehaviour:
   m_ObjectHideFlags: 0

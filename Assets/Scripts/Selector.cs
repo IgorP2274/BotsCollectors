@@ -5,6 +5,7 @@ using UnityEngine;
 public class Selector : MonoBehaviour
 {
     [SerializeField] private Flag _flag;
+    [SerializeField] private int _stationBildCost;
 
     private Flag _flagForBild;
     private bool _isSelectedStation = false;
@@ -76,10 +77,14 @@ public class Selector : MonoBehaviour
         if (_startBild)
             return;
 
+        if (_station.ResourseCount < _stationBildCost)
+            return;
+
         if (_station.TryGetFreeBot(out _bot))
         {
             _bot.GetFlag(_flagForBild);
             _startBild = true;
+            _station.SpendResourses(_stationBildCost);
         }   
     }
 }

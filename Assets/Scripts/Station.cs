@@ -8,7 +8,6 @@ public class Station : MonoBehaviour
     [SerializeField] private Bot _bot;
     [SerializeField] private int _startBotCount;
     [SerializeField] private int _botCost;
-    [SerializeField] private int _stationCost;
     [SerializeField] private UnityEvent _takeCristal;
 
     public int ResourseCount => _resourseCount;
@@ -63,6 +62,9 @@ public class Station : MonoBehaviour
             return true;
         }
     }
+
+    public void SpendResourses(int cost) =>
+        _resourseCount -= cost;
 
     public void AddBot(Bot bot) =>
         _botQueue.Enqueue(bot);
