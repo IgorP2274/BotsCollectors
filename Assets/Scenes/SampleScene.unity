@@ -130,6 +130,62 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4659664040710180834, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _parentResourse
+      value: 
+      objectReference: {fileID: 804549096}
+    - target: {fileID: -4383260707807428663, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _bot
+      value: 
+      objectReference: {fileID: 5420672418251275248, guid: ef821089b47ee9e4d812e71628b1495c, type: 3}
+    - target: {fileID: -4383260707807428663, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _startBotCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199183276126056916, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199183276126056916, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _takeCristal.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 457725085}
+    - target: {fileID: 4199183276126056916, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _takeCristal.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowCristalCount
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199183276126056916, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199183276126056916, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 457725085}
+    - target: {fileID: 4199183276126056916, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199183276126056916, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowCristalCount
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199183276126056916, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _takeCristal.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResourseCount, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199183276126056916, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResourseCount, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199183276126056916, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _takeCristal.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199183276126056916, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4766902308389707131, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
       propertyPath: m_Name
       value: StationStart
@@ -197,6 +253,46 @@ PrefabInstance:
     - target: {fileID: 4766902308389707135, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192287628679119475, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _flag
+      value: 
+      objectReference: {fileID: 6778987022314600448, guid: bb11c3c65b3196a4fad3f78b2bf6dd9d, type: 3}
+    - target: {fileID: 5192287628679119475, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _stationBildCost
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489539843980731520, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _botCost
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489539843980731520, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489539843980731520, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489539843980731520, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 457725085}
+    - target: {fileID: 7489539843980731520, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489539843980731520, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowCristalCount
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489539843980731520, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResourseCount, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489539843980731520, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+      propertyPath: _changedCristalCount.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
@@ -335,17 +431,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225768547}
   m_CullTransparentMesh: 1
---- !u!114 &299249389 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4766902308389707134, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
-  m_PrefabInstance: {fileID: 66528491}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4dfaff3540f52441a60333741c8070d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &457725081
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0fda3c961b0db342b2d4992fb21f19f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _station: {fileID: 299249389}
+  _resourses: {fileID: 1914137302}
 --- !u!1 &584512284
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,9 +664,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 299249389}
-        m_TargetAssemblyTypeName: Station, Assembly-CSharp
-        m_MethodName: BayBot
+      - m_Target: {fileID: 1914137302}
+        m_TargetAssemblyTypeName: ResourseController, Assembly-CSharp
+        m_MethodName: TryBuyBot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1360,8 +1445,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 299249389}
-        m_TargetAssemblyTypeName: Station, Assembly-CSharp
+      - m_Target: {fileID: 1914137300}
+        m_TargetAssemblyTypeName: Scan, Assembly-CSharp
         m_MethodName: ScanResourses
         m_Mode: 1
         m_Arguments:
@@ -1410,3 +1495,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897615603}
   m_CullTransparentMesh: 1
+--- !u!114 &1914137300 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4659664040710180834, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+  m_PrefabInstance: {fileID: 66528491}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0277b13ec54d08b4fbb459821e7ea4d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1914137302 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7489539843980731520, guid: 9a1ffc1f19c8a374aa1e8579d116f7e0, type: 3}
+  m_PrefabInstance: {fileID: 66528491}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0760570dd4fff6a4ba989fbb294178dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

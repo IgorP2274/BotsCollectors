@@ -5,7 +5,7 @@ using TMPro;
 
 public class ResourseCount : MonoBehaviour
 {
-    [SerializeField] private Station _station;
+    [SerializeField] private ResourseController _resourses;
 
     private TMP_Text _text;
 
@@ -16,5 +16,5 @@ public class ResourseCount : MonoBehaviour
     }
 
     public void ShowCristalCount() =>
-        _text.text = "Кристалы: " + _station.ResourseCount;
+        _text.text = "Кристалы: " + _resourses.ResourseCount;
 }

@@ -1,52 +1,60 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Station))]
+[RequireComponent(typeof(ResourseController))]
 
-public class Selector : MonoBehaviour
+public class StationBilder : MonoBehaviour
 {
     [SerializeField] private Flag _flag;
     [SerializeField] private int _stationBildCost;
 
-    private Flag _flagForBild;
-    private bool _isSelectedStation = false;
-    private bool _isSelectedFlag = false;
+    private Flag _flagForBild = null;
     private RaycastHit _hit;
     private Station _station;
+    private ResourseController _resourses;
     private Station _selectedStation = null;
     private Bot _bot = null;
+
     private bool _startBild = false;
+    private bool _isStationButtonDown = false;
+    private bool _isStationButtonUp = false;
 
     private void Awake()
     {
         _station = GetComponent<Station>();
+        _resourses = GetComponent<ResourseController>();
     }
 
     private void Update()
     {
+        if (_startBild)
+            return;
+
         SelectStation();
-        CreateFlag();
-        StartBild();
+        InstallFlag();
+        StartBild(); 
     }
 
     public void SelectStation()
     {
-        if (Input.GetMouseButtonDown(0) && _isSelectedStation == false)
+        if (Input.GetMouseButtonDown(0) && _isStationButtonDown == false)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(ray, out _hit);
             _hit.transform.TryGetComponent(out _selectedStation);
 
-            if (_station == _selectedStation)
-                _isSelectedStation = true;
+            if (_station == _selectedStation) 
+                _isStationButtonDown = true;
         }
 
-        if (Input.GetMouseButtonUp(0) && _isSelectedStation)
-            _isSelectedFlag = true;
+        if (Input.GetMouseButtonUp(0) && _isStationButtonDown) 
+            _isStationButtonUp = true;
     }
 
-    private void CreateFlag()
+
+    private void InstallFlag()
     {
-        if (_isSelectedFlag == false)
+        if (_isStationButtonUp == false)
             return;
 
         if (Input.GetMouseButtonDown(0))
@@ -60,31 +68,26 @@ public class Selector : MonoBehaviour
                 else
                     _flagForBild.transform.position = _hit.point;
 
-
-
-
-                _isSelectedFlag = false;
-                _isSelectedStation = false;
+                _isStationButtonUp = false;
+                _isStationButtonDown = false;
             }
         }
     }
 
+
     private void StartBild()
     {
-        if (_flagForBild == null) 
+        if (_flagForBild == null)
             return;
 
-        if (_startBild)
-            return;
-
-        if (_station.ResourseCount < _stationBildCost)
+        if (_resourses.ResourseCount < _stationBildCost)
             return;
 
         if (_station.TryGetFreeBot(out _bot))
         {
             _bot.GetFlag(_flagForBild);
             _startBild = true;
-            _station.SpendResourses(_stationBildCost);
-        }   
+            _resourses.SpendResourses(_stationBildCost);
+        }
     }
 }

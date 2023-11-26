@@ -14,8 +14,10 @@ GameObject:
   - component: {fileID: 4766902308389707130}
   - component: {fileID: 4766902308389707134}
   - component: {fileID: 4766902308389707121}
-  - component: {fileID: 4766902308389707123}
-  - component: {fileID: 4766902308389707120}
+  - component: {fileID: -4659664040710180834}
+  - component: {fileID: -4383260707807428663}
+  - component: {fileID: 7489539843980731520}
+  - component: {fileID: 5192287628679119475}
   m_Layer: 0
   m_Name: Station
   m_TagString: Untagged
@@ -113,25 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4dfaff3540f52441a60333741c8070d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parentResourse: {fileID: 0}
-  _bot: {fileID: 5420672418251275248, guid: ef821089b47ee9e4d812e71628b1495c, type: 3}
-  _startBotCount: 0
-  _botCost: 3
-  _takeCristal:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ResourseCount, Assembly-CSharp
-        m_MethodName: ShowCristalCount
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!54 &4766902308389707121
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -148,7 +131,50 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4766902308389707123
+--- !u!114 &-4659664040710180834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4766902308389707131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0277b13ec54d08b4fbb459821e7ea4d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentResourse: {fileID: 0}
+--- !u!114 &-4383260707807428663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4766902308389707131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79af479083e0c44dbe28ee915ce2d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bot: {fileID: 0}
+  _startBotCount: 0
+--- !u!114 &7489539843980731520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4766902308389707131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0760570dd4fff6a4ba989fbb294178dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _changedCristalCount:
+    m_PersistentCalls:
+      m_Calls: []
+  _botCost: 0
+--- !u!114 &5192287628679119475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,34 +186,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a8a1070d474074591789fb016a5828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flag: {fileID: 6778987022314600448, guid: bb11c3c65b3196a4fad3f78b2bf6dd9d, type: 3}
-  _stationBildCost: 5
---- !u!114 &4766902308389707120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4766902308389707131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 4766902308389707123}
-          m_TargetAssemblyTypeName: Selector, Assembly-CSharp
-          m_MethodName: SelectStation
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  _flag: {fileID: 0}
+  _stationBildCost: 0
