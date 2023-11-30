@@ -13,6 +13,7 @@ public class ResourseController : MonoBehaviour
     private int _resourseCount;
     private Station _station;
     private BotBilder _botBilder;
+    private bool _isBildingNewStantion = false;
 
     private void Awake()
     {
@@ -33,6 +34,15 @@ public class ResourseController : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (_isBildingNewStantion)
+            return;
+
+        if (_resourseCount >= _botCost) 
+            TryBuyBot();
+    }
+
     public void SpendResourses(int cost)
     {
         _resourseCount -= cost;
@@ -48,4 +58,10 @@ public class ResourseController : MonoBehaviour
             _changedCristalCount?.Invoke();
         }
     }
+
+    public void StartBilding() =>
+        _isBildingNewStantion = true;
+
+    public void StopBilding() =>
+        _isBildingNewStantion = false;
 }

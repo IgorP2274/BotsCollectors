@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parentResourse: {fileID: 0}
+  _cooldownTime: 2
 --- !u!114 &-4383260707807428663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,8 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79af479083e0c44dbe28ee915ce2d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bot: {fileID: 0}
-  _startBotCount: 0
+  _bot: {fileID: 5420672418251275248, guid: ef821089b47ee9e4d812e71628b1495c, type: 3}
+  _startBotCount: 3
 --- !u!114 &7489539843980731520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +174,7 @@ MonoBehaviour:
   _changedCristalCount:
     m_PersistentCalls:
       m_Calls: []
-  _botCost: 0
+  _botCost: 3
 --- !u!114 &5192287628679119475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,5 +187,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a8a1070d474074591789fb016a5828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flag: {fileID: 0}
-  _stationBildCost: 0
+  _flag: {fileID: 6778987022314600448, guid: bb11c3c65b3196a4fad3f78b2bf6dd9d, type: 3}
+  _stationBildCost: 5

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Station))]
@@ -12,24 +13,19 @@ public class StationBilder : MonoBehaviour
     private RaycastHit _hit;
     private Station _station;
     private ResourseController _resourses;
-    private Station _selectedStation = null;
     private Bot _bot = null;
 
-    private bool _startBild = false;
     private bool _isStationButtonDown = false;
     private bool _isStationButtonUp = false;
 
-    private void Awake()
+    private void Start()
     {
-        _station = GetComponent<Station>();
         _resourses = GetComponent<ResourseController>();
+        _station = GetComponent<Station>();
     }
 
     private void Update()
     {
-        if (_startBild)
-            return;
-
         SelectStation();
         InstallFlag();
         StartBild(); 
@@ -41,9 +37,8 @@ public class StationBilder : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(ray, out _hit);
-            _hit.transform.TryGetComponent(out _selectedStation);
 
-            if (_station == _selectedStation) 
+            if (_hit.transform == transform) 
                 _isStationButtonDown = true;
         }
 
@@ -70,6 +65,8 @@ public class StationBilder : MonoBehaviour
 
                 _isStationButtonUp = false;
                 _isStationButtonDown = false;
+
+                _resourses.StartBilding();
             }
         }
     }
@@ -86,8 +83,10 @@ public class StationBilder : MonoBehaviour
         if (_station.TryGetFreeBot(out _bot))
         {
             _bot.GetFlag(_flagForBild);
-            _startBild = true;
             _resourses.SpendResourses(_stationBildCost);
+            _resourses.StopBilding();
+
+            enabled = false;
         }
     }
 }
